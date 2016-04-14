@@ -5,13 +5,20 @@
     <title>Prueba de Angular Material</title>
     <!--Angular Material-->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-app ng-init = "Creador = 'Jenny-Ha' " > <!---No e suna buena practica definirlo
+ en la vista el MODELO. Fines de aprendizaje-->
+    <p>Esta aplicacion de AngularJS fue creado por {{Creador}}  
+       cuya edad es {{2016-1992}} años.
+       
+    </p>
     
     <!--Scripts-->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="js/myapp.js"></script>
 </body>
 </html>

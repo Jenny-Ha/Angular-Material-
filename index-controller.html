@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Controller and Scope</title>
+    <!--Angular Material-->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller = "AlumnosController"> 
+    <!---No e suna buena practica definirlo
+    en la vista el MODELO. Fines de aprendizaje-->
+    <h2>ALUMNOS CUADERNO</h2>
+    <div>
+        <div ng-repeat="alumno in alumnos"> <!-- Alumnos es el modelo? y 
+    alumno es una referencia a cada uno de los items del arreglo -->
+            <div> {{alumno.nombre}} - {{alumno.telefono}} </div>
+            <span> {{alumno.curso}} </span>
+        </div>    
+    </div>
+    
+    
+    <!--Scripts-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="js/myapp.js"></script>
+
+</body>
+</html>
