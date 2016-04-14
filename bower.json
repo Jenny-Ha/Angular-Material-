@@ -1,0 +1,26 @@
+{
+  "name": "Prueba de Angular",
+  "homepage": "https://github.com/Jenny-Ha/Angular-Material-",
+  "authors": [
+    "Jenny-Ha <jennyha069@gmail.com>"
+  ],
+  "description": "Aprendiendo a usar bower, angular y material con angular",
+  "main": "",
+  "keywords": [
+    "prueba",
+    "angular",
+    "material"
+  ],
+  "license": "No license",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.7"
+  }
+}
