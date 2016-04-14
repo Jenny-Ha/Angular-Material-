@@ -21,11 +21,20 @@ app.controller('AlumnosController', function($scope){
             telefono: $scope.nuevoAlumno.telefono,
             curso: $scope.nuevoAlumno.curso
         });
-           $scope.nuevoAlumno.nombre = '';
-    $scope.nuevoAlumno.telefono = '';
-    $scope.nuevoAlumno.curso = '';
-
-    }
-});
+     /*   $scope.nuevoAlumno.nombre = '';
+        $scope.nuevoAlumno.telefono = '';
+        $scope.nuevoAlumno.curso = '';
+       */ 
+        $scope.formVisibility = false;
+        console.log($scope.formVisibility);
+   }
+   
+   $scope.formVisibility = false;
+   $scope.showForm = function (){
+       $scope.formVisibility = true;
+       console.log($scope.formVisibility);
+   };
+   
+}); //Fin AlumnosController
 
     

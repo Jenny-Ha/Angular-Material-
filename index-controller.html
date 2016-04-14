@@ -19,9 +19,18 @@
             <span> {{alumno.curso}} </span>
         </div>    
     </div>
+    <br>
     
+    <center>
+        <button ng-click="showForm()" ng-hide="formVisibility">
+             Añadir 
+        </button>
+    </center>
+    <!-- showForm() cambiará formVisibility de true a false
+        hide -> true: oculta el boton
+    -->
     <!-- Formualrio para añadir alumno -->
-    <div class="wrapper">
+    <div ng-show="formVisibility" class="wrapper">
         <h2>Añadir contactp</h2>
        
             <p>
