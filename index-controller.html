@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Controller and Scope</title>
@@ -11,14 +11,33 @@
     <!---No e suna buena practica definirlo
     en la vista el MODELO. Fines de aprendizaje-->
     <h2>ALUMNOS CUADERNO</h2>
-    <div>
-        <div ng-repeat="alumno in alumnos"> <!-- Alumnos es el modelo? y 
-    alumno es una referencia a cada uno de los items del arreglo -->
+    <div class="wrapper">
+        <div class="contact-item" ng-repeat="alumno in alumnos | orderBy: 'telefono' "> 
+            <!-- Alumno es cada fila u arreglo de la lista dentro del modelo alumnos --> 
+            <!-- Alumnos es el modelo? y alumno es una referencia a cada uno de los items del arreglo -->
             <div> {{alumno.nombre}} - {{alumno.telefono}} </div>
             <span> {{alumno.curso}} </span>
         </div>    
     </div>
     
+    <!-- Formualrio para añadir alumno -->
+    <div class="wrapper">
+        <h2>Añadir contactp</h2>
+       
+            <p>
+                 Nombre <input ng-model="nuevoAlumno.nombre" type="text">
+            </p>
+            <p>
+                 Telefono <input type="text" ng-model="nuevoAlumno.telefono">
+            </p>
+            <p>
+                 Curso <input type="text" ng-model="nuevoAlumno.curso">
+            </p>
+            <p>
+                <button ng-click="Save()">Guardar</button>
+            </p>
+       
+    </div>
     
     <!--Scripts-->
     <script src="bower_components/angular/angular.min.js"></script>
